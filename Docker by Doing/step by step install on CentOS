@@ -1,0 +1,20 @@
+Installing Docker
+
+Install the Docker prerequisites:
+#sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+
+Using yum-config-manager, add the CentOS-specific Docker repo:
+#sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+Install Docker:
+#sudo yum -y install docker-ce
+
+Add user account to interact with docker daemon 
+#sudo usermod -aG docker cloud_user
+
+exit and login as the user again.
+
+check docker version and pull image from docker repository
+
+e.g docker run hello-world
+
